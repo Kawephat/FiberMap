@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fibermap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyCEzPjAsjYJhqnH3Dug9FyWrw6QXXmhs&callback=initMap"async defer></script>
+    <style>
+      #map {
+        height: 70%;
+        margin: 50px;
+        padding: 0;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #778899	;
+
+      }
+    </style>
+  </head>
+
+  <body>
+<!---Nav bar-------->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><h2> <span class="glyphicon glyphicon-map-marker"></span>  Fiber Map CMU </h2></a>
+        </div>
+      </div>
+    <br><br></nav>
+
+<!---Map-------->
+        <br><br><br><br>
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 18.7953662, lng: 98.9530767},
+              zoom: 18
+            });
+          }
+        </script>
+
+
+
+<!---BottomText-------->
+  <div class="jumbotron">
+      <div class="row">
+      <div class="col-md-6 col-md-offset-1" >
+        <h2>Page : <button class="btn btn-default" type="submit">First</button>
+        <button class="btn btn-default" type="submit">Previous</button> 1/3 of 5
+        <button class="btn btn-default" type="submit">Next</button>
+        <button class="btn btn-default" type="submit">Last</button>
+        </h2>
+      </div>
+      <div class="col-md-6 col-md-offset-1" >
+      <h2>Status :
+        <button class="btn btn-default" type="submit">All</button>
+        <button class="btn btn-default" type="submit">Down</button>
+        <button class="btn btn-default" type="submit">Up</button>
+      </h2>
+      </div>
+      <div class="col-md-6 col-md-offset-1" >
+      <h2>Layer :
+        <button class="btn btn-default" type="submit">All</button>
+        <button class="btn btn-default" type="submit">Core-End</button>
+        <button class="btn btn-default" type="submit">Core-Core</button>
+      </h2>
+      </div>
+
+
+      <!---table-------->
+      <div class="col-md-6 col-md-offset-1"  >
+      <div class="well well-lg">
+      <table class="table table-hover">
+         <thead>
+           <tr>
+             <th>AP_Name</th>
+             <th>From</th>
+             <th>To</th>
+             <th>Status</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>4k_engarch_sw</td>
+             <td>eng</td>
+             <td>arch</td>
+             <td>Up</td>
+           </tr>
+           <tr>
+             <td>4k_engarch_sw</td>
+             <td>eng</td>
+             <td>arch</td>
+             <td>Up</td>
+           </tr>
+           <tr>
+             <td>4k_engarch_sw</td>
+             <td>eng</td>
+             <td>arch</td>
+             <td>Up</td>
+           </tr>
+           <tr>
+             <td>4k_engarch_sw</td>
+             <td>eng</td>
+             <td>arch</td>
+             <td>Up</td>
+           </tr>
+
+         </tbody>
+       </table>
+       </div>
+      </div>
+  </div>
+      </div>
+
+
+  </body>
+
+</html>
