@@ -11,7 +11,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyCEzPjAsjYJhqnH3Dug9FyWrw6QXXmhs&callback=initMap"async defer></script>
     <style>
       #map {
-        height: 70%;
+        height: 80%;
         margin: 50px;
         padding: 0;
       }
@@ -38,7 +38,7 @@
 
 <!---Map-------->
         <br><br><br><br>
-        <div id="map"></div>
+        <div id="map">
         <script>
           var map;
           function initMap() {
@@ -46,9 +46,46 @@
               center: {lat: 18.7953662, lng: 98.9530767},
               zoom: 18
             });
+          var flightPlanCoordinates = [
+            {lat: 18.7956453, lng: 98.952812},
+            {lat: 18.7982302, lng: 98.9491877},
+            {lat: 18.8004538, lng: 98.9504027},
+            {lat: 18.7932254, lng: 98.9562057}
+          ];
+          var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 5
+          });
+
+
+         //
+        //   var i;
+         //
+        //  for (i = 0; i < pos.length; i++) {
+        //    var marker = new google.maps.Marker({
+        //      position: new google.maps.LatLng(pos[i][1], pos[i][2]),
+        //      map: map
+        //    });
+
+          var marker = new google.maps.Marker({
+              position:   {lat: 18.7956453, lng: 98.952812},
+              map: map
+            });
+
+                      //
+                      // var marker = new google.maps.Marker({
+                      //     position:   new google.maps.LatLng(18.7956453, 98.952812),
+                      //     map: map
+                      //   });
+
+          flightPath.setMap(map);
+
           }
         </script>
-
+        </div>
 
 
 <!---BottomText-------->
